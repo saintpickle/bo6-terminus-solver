@@ -40,6 +40,11 @@
             Let's save you that 5K, just get a friend to hold the zombies or
             pause your game.
         </p>
+
+        <p class="text-4xl">
+            <span class="text-green-500">Code:</span>
+            {code}
+        </p>
     </div>
 
     <div class="flex flex-col gap-y-6 md:gap-x-6">
@@ -71,11 +76,6 @@
                 bind:value={z}
             />
         </div>
-
-        <p class="text-4xl">
-            <span class="text-green-500">Code:</span>
-            {code}
-        </p>
 
         <button
             onclick={reset}
