@@ -1,18 +1,17 @@
 <script>
-    let x = $state();
-    let y = $state();
-    let z = $state();
+    let x = $state(null);
+    let y = $state(null);
+    let z = $state(null);
+
+    let state = $derived([x, y, z]);
 
     let code = $derived.by(() => {
         let a = "00";
         let b = "00";
         let c = "00";
 
-        if (x) {
+        if (!state.includes(null)) {
             a = x * 2 + 11;
-        }
-
-        if (x && y && z) {
             b = 2 * z + y - 5;
             c = y + z - x;
         }
@@ -28,7 +27,7 @@
 </script>
 
 <div
-    class="h-screen w-screen gap-y-8 flex flex-col items-center justify-between bg-slate-800 text-white text-center"
+    class="h-screen w-screen gap-y-8 flex flex-col items-center justify-between bg-slate-800 text-white text-center md:justify-center"
 >
     <div class="flex flex-col p-4 gap-y-8">
         <h1
@@ -83,10 +82,5 @@
             >Reset Code
         </button>
     </div>
-
-    <footer
-        class="w-full text-center py-4 bg-green-500 text-slate-800 font-bold"
-    >
-        <p class="text-lg">BO6 Terminus Calculator</p>
-    </footer>
+    <div class="md:hidden"></div>
 </div>
