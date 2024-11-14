@@ -37,7 +37,8 @@
         </h1>
         <p class="text-md md:text-lg">
             Let's save you that 5K, just get a friend to hold the zombies or
-            pause your game.
+            pause your game. All numbers must be present in order for the code
+            to generate.
         </p>
 
         <p class="text-4xl">
